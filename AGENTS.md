@@ -16,17 +16,42 @@ Public repo (knowledge)  → THIS REPO — Sanitized wiki pages, concepts, entit
 
 Content here is derived from the private `research` repo. Sensitive details (internal IPs, credentials, agent identifiers, memory bank references) are removed before publishing.
 
+## Bilingual Structure
+
+This repo is bilingual: **English (primary) + Traditional Chinese (auto-translated)**.
+
+```
+wiki/
+  concepts/
+    karpathy-llm-wiki.md        ← English (primary, authoritative)
+    karpathy-llm-wiki.zh.md     ← Traditional Chinese (auto-translated from .en)
+  entities/
+    ...
+    ...
+    entity-name.zh.md
+```
+
+### Language Rules
+
+1. **English is primary.** Create/edit the `.md` file (no suffix) first.
+2. **Traditional Chinese is derivative.** Auto-generate `.zh.md` from the English version.
+3. **Never edit `.zh.md` directly.** It will be overwritten on next sync. Fix the English source instead.
+4. **Frontmatter `lang` field**: `lang: en` for primary, `lang: zh` for translation.
+5. **Wikilinks**: `[[note-name]]` links to English, `[[note-name.zh]]` links to Chinese.
+6. **Translation preserves structure.** Same sections, same evidence table, same frontmatter (except `lang`).
+7. **Technical terms stay in English** within Chinese text (e.g. "frontmatter", "Wikidata QID").
+
 ## Directory Structure
 
 ```
 wiki/
-  concepts/      Core concept pages
+  concepts/      Core concept pages (.md = EN, .zh.md = ZH)
   entities/      People, organizations, tools, projects
   comparisons/   A vs B comparisons
   syntheses/     Cross-source thematic synthesis
   summaries/     One summary per source (sanitized)
 
-_templates/      Note templates
+_templates/      Note templates (.md = EN, .zh.md = ZH)
 ```
 
 ## Frontmatter Standard
@@ -36,6 +61,7 @@ _templates/      Note templates
 ```yaml
 ---
 title: "Note Title"
+lang: en                           # en (primary) | zh (translation)
 type: concept | entity | comparison | synthesis | summary
 status: draft | active | deprecated | superseded
 created: YYYY-MM-DD
@@ -97,18 +123,28 @@ Each note is split into two zones:
 
 ### 1. Publish (from private repo)
 
-1. Take a wiki page from the private `research` repo
+1. Take a wiki page from the private `research` repo (Traditional Chinese)
 2. Sanitize: remove internal IPs, credentials, agent names, bank references
-3. Replace internal references with public-safe equivalents
-4. Commit to this repo
+3. Translate to English (primary version)
+4. Commit `.md` (English) to this repo
+5. Run translation sync to generate `.zh.md` (Traditional Chinese)
 
-### 2. Query
+### 2. Translate (sync EN → ZH)
+
+1. Find all `.md` files without `.zh.md` counterpart (or where `.zh.md` is stale)
+2. For each: translate content to Traditional Chinese, preserving structure
+3. Set `lang: zh` in frontmatter
+4. Keep technical terms in English (frontmatter, Wikidata, API names)
+5. Save as `original-name.zh.md`
+6. Commit with message: `i18n: sync zh translation for [note-name]`
+
+### 3. Query
 
 1. Read `index.md` to find relevant pages
-2. Drill into specific wiki pages
+2. Drill into specific wiki pages (use `.zh.md` if querying in Chinese)
 3. Answer with citations (note ID + source URL)
 
-### 3. Lint
+### 4. Lint
 
 1. Check `index.md` matches actual files
 2. Check for broken `[[wikilinks]]`
@@ -116,6 +152,8 @@ Each note is split into two zones:
 4. Check `review_after` dates — flag stale notes
 5. Verify external URLs still valid
 6. Check `tier` — propose demoting dormant notes to archive
+7. **Check bilingual sync**: every `.md` should have a `.zh.md` counterpart
+8. **Check translation freshness**: `.zh.md` `updated` should match `.md` `updated`
 
 ## Rules
 
@@ -131,6 +169,8 @@ Each note is split into two zones:
 10. **Do not mirror full Wikipedia content.** Store summaries, quotes, and metadata only.
 11. **Update `updated` field on every change.**
 12. **Sanitize before publishing.** If in doubt, leave it in the private repo.
+13. **Keep bilingual sync.** Every English page must have a `.zh.md` translation.
+14. **Never edit translations directly.** Fix the English source, then re-sync.
 
 ## Memory Decay (Tier System)
 

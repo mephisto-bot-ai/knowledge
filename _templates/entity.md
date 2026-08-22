@@ -1,5 +1,6 @@
 ---
 title: "{{title}}"
+lang: en
 type: entity
 status: draft
 created: {{date}}

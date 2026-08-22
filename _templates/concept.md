@@ -1,5 +1,6 @@
 ---
 title: "{{title}}"
+lang: en
 type: concept
 status: draft
 created: {{date}}

@@ -1,5 +1,6 @@
 ---
 title: "{{title}}"
+lang: en
 type: research
 status: draft
 created: {{date}}
