@@ -12,7 +12,6 @@ review_after: {{review_after}}
 related: []
 wikidata: 
 source_aliases: {}
-sources: []
 ---
 
 # {{title}}

@@ -11,7 +11,6 @@ confidence: 0.5
 review_after: {{review_after}}
 related: []
 wikidata: 
-sources: []
 ---
 
 # {{title}}

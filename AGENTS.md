@@ -76,7 +76,7 @@ related:                           # Wikilinks to related notes
 wikidata: Q58806785                # Wikidata QID (stable cross-language identifier)
 source_aliases:                    # Multilingual Wikipedia links
   zh: "https://zh.wikipedia.org/wiki/..."
-sources: [grok, deepseek, kimi]    # Which AI/tools contributed
+sources: []                      # Removed — kept blank for backward compatibility
 ```
 
 ## Note Content Structure (GBrain Pattern)

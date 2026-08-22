@@ -10,7 +10,6 @@ tier: active
 confidence: 0.5
 review_after: {{review_after}}
 related: []
-sources: []
 ---
 
 # {{title}}

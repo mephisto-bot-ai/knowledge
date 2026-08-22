@@ -12,7 +12,6 @@ source_urls:
     archive: 
     accessed: {{date}}
     revision: 
-sources: []
 ---
 
 # {{title}}
