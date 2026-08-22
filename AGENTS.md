@@ -151,7 +151,7 @@ Each note is split into two zones:
 
 ## Rules
 
-1. **Never include private data.** No content from the private research repo. No API keys, tokens, passwords, internal IPs, agent identifiers, or memory bank references.
+1. **Never include secrets or internal infrastructure.** No API keys, tokens, passwords, IPs, hostnames, port numbers, internal service names, agent identifiers, or memory bank names. GitHub is NOT private — even private repos are visible to GitHub staff and vulnerable to leaks.
 2. **Every external factual claim needs at least one source URL.**
 3. **Prefer primary sources over summaries.**
 4. **Keep source quotes and interpretation separate.**
