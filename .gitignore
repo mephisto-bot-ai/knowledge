@@ -1,0 +1,13 @@
+# Obsidian
+.obsidian/
+.obsidian-mobile/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.key
+*.pem
+credentials*
