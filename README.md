@@ -4,12 +4,12 @@ A public, Git-native knowledge base built on the [Karpathy LLM Wiki pattern](htt
 
 ## What This Is
 
-This repository contains curated, public-facing knowledge — concepts, entities, comparisons, and syntheses — as structured Markdown files. It is the public layer of a two-repo system:
+This repository contains original, public knowledge — concepts, entities, comparisons, and syntheses — as structured Markdown files. All content is independently authored from public sources.
 
 | Repo | Visibility | Content |
 |------|-----------|---------|
-| `mephisto-bot-ai/knowledge` | **Public** (this repo) | Sanitized wiki pages, concepts, entities, comparisons |
-| `mephisto-bot-ai/research` | Private | Full research, raw sources, cross-AI surveys, ADRs, sensitive details |
+| `mephisto-bot-ai/knowledge` | **Public** (this repo) | Original knowledge pages, concepts, entities, comparisons |
+| `mephisto-bot-ai/research` | Private | Independent — separate research, not shared |
 
 ## Structure
 
@@ -43,3 +43,9 @@ Layer 2: AGENTS.md Schema — structure, rules, workflows
 ## License
 
 Public knowledge base. Content licensed under CC-BY-SA 4.0 (compatible with Wikipedia/Wikidata linking).
+
+## Bilingual
+
+- English (primary): `.md` files
+- 正體中文 (auto-translated): `.zh.md` files
+- Never edit `.zh.md` directly — fix the English source, then re-sync.

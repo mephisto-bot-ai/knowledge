@@ -7,14 +7,9 @@
 
 ## Purpose
 
-This is the **public knowledge base** — curated, sanitized knowledge pages accessible to anyone.
+This is a **public knowledge base** — original, self-contained knowledge pages accessible to anyone.
 
-```
-Private repo (research)  → Full research, raw sources, cross-AI surveys, ADRs, sensitive details
-Public repo (knowledge)  → THIS REPO — Sanitized wiki pages, concepts, entities, comparisons
-```
-
-Content here is derived from the private `research` repo. Sensitive details (internal IPs, credentials, agent identifiers, memory bank references) are removed before publishing.
+This repo is **independent**. It does not contain, derive from, or reference any private research data. All content is originally authored for this repo based on public sources.
 
 ## Bilingual Structure
 
@@ -49,7 +44,7 @@ wiki/
   entities/      People, organizations, tools, projects
   comparisons/   A vs B comparisons
   syntheses/     Cross-source thematic synthesis
-  summaries/     One summary per source (sanitized)
+  summaries/     One summary per public source
 
 _templates/      Note templates (.md = EN, .zh.md = ZH)
 ```
@@ -121,13 +116,12 @@ Each note is split into two zones:
 
 ## Operations
 
-### 1. Publish (from private repo)
+### 1. Create
 
-1. Take a wiki page from the private `research` repo (Traditional Chinese)
-2. Sanitize: remove internal IPs, credentials, agent names, bank references
-3. Translate to English (primary version)
-4. Commit `.md` (English) to this repo
-5. Run translation sync to generate `.zh.md` (Traditional Chinese)
+1. Research a topic from public sources (Wikipedia, official docs, public papers)
+2. Write the knowledge page in English (primary)
+3. Commit `.md` to this repo
+4. Run translation sync to generate `.zh.md` (Traditional Chinese)
 
 ### 2. Translate (sync EN → ZH)
 
@@ -157,7 +151,7 @@ Each note is split into two zones:
 
 ## Rules
 
-1. **Never publish secrets.** No API keys, tokens, passwords, internal IPs, agent identifiers, or memory bank references.
+1. **Never include private data.** No content from the private research repo. No API keys, tokens, passwords, internal IPs, agent identifiers, or memory bank references.
 2. **Every external factual claim needs at least one source URL.**
 3. **Prefer primary sources over summaries.**
 4. **Keep source quotes and interpretation separate.**
@@ -168,7 +162,7 @@ Each note is split into two zones:
 9. **Re-check notes after their `review_after` date.**
 10. **Do not mirror full Wikipedia content.** Store summaries, quotes, and metadata only.
 11. **Update `updated` field on every change.**
-12. **Sanitize before publishing.** If in doubt, leave it in the private repo.
+12. **All content is original to this repo.** Do not copy from private repos. Write from public sources.
 13. **Keep bilingual sync.** Every English page must have a `.zh.md` translation.
 14. **Never edit translations directly.** Fix the English source, then re-sync.
 
