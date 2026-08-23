@@ -1,0 +1,63 @@
+# Claim registry
+# One entry per independently checkable factual claim.
+# Keep IDs stable. Never reuse an ID for a different statement.
+claims:
+  - id: claim:karpathy-llm-wiki-pattern:three-layers
+    note: wiki/concepts/karpathy-llm-wiki-pattern.md
+    text: "The pattern has three layers: raw sources, wiki pages, and a schema file."
+    status: active
+    confidence: 0.95
+    created: 2026-08-23
+    updated: 2026-08-23
+    supersedes: null
+    superseded_by: null
+    evidence:
+      - id: evidence:karpathy-gist:pattern
+        relation: supports
+        url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+        source_type: primary
+        publisher: "Andrej Karpathy"
+        published: null
+        accessed: 2026-08-23
+        locator: "Knowledge wiki pattern description"
+        note: "The original gist describes the raw, wiki, and schema layers."
+
+  - id: claim:karpathy-llm-wiki-pattern:immutable-raw
+    note: wiki/concepts/karpathy-llm-wiki-pattern.md
+    text: "Raw sources are saved as immutable evidence for later checking."
+    status: active
+    confidence: 0.95
+    created: 2026-08-23
+    updated: 2026-08-23
+    supersedes: null
+    superseded_by: null
+    evidence:
+      - id: evidence:karpathy-gist:pattern
+        relation: supports
+        url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+        source_type: primary
+        publisher: "Andrej Karpathy"
+        published: null
+        accessed: 2026-08-23
+        locator: "Raw source handling"
+        note: "The original gist describes raw sources as a stable evidence layer."
+
+  - id: claim:karpathy-llm-wiki-pattern:compounding
+    note: wiki/concepts/karpathy-llm-wiki-pattern.md
+    text: "The knowledge base can compound over time when agents read and update the wiki."
+    status: active
+    confidence: 0.90
+    created: 2026-08-23
+    updated: 2026-08-23
+    supersedes: null
+    superseded_by: null
+    evidence:
+      - id: evidence:karpathy-gist:pattern
+        relation: supports
+        url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+        source_type: primary
+        publisher: "Andrej Karpathy"
+        published: null
+        accessed: 2026-08-23
+        locator: "Knowledge accumulation over repeated runs"
+        note: "The original gist presents the wiki as a cumulative memory for future runs."
