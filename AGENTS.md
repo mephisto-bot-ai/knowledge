@@ -159,6 +159,7 @@ Each note is split into two zones:
 5. **Do not overwrite a note when a new claim conflicts with it.** Mark the conflict explicitly.
 6. **Do not delete old knowledge.** Supersede it with a new version and link the transition.
 7. **Never merge directly into main.** Open a PR for review.
+7a. **Discuss before large changes.** Open an issue first. State the problem, the proposed change, and the alternatives. Wait for resolution (suggested 72 hours) before opening a PR. Link the PR to the issue. Each PR should solve one well-defined item, not bundle multiple decisions together.
 8. **Every update must include a change reason** in the Evidence Timeline.
 9. **Re-check notes after their `review_after` date.**
 10. **Do not mirror full Wikipedia content.** Store summaries, quotes, and metadata only.
