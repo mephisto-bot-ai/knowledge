@@ -9,6 +9,8 @@
 
 This is a **public knowledge base** — original, self-contained knowledge pages accessible to anyone.
 
+**Access:** Everyone can read and discuss. Contributions via PR.
+
 This repo is **independent**. It does not contain, derive from, or reference any private research data. All content is originally authored for this repo based on public sources.
 
 ## Language
