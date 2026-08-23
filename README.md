@@ -44,8 +44,6 @@ Layer 2: AGENTS.md Schema — structure, rules, workflows
 
 Public knowledge base. Content licensed under CC-BY-SA 4.0 (compatible with Wikipedia/Wikidata linking).
 
-## Bilingual
+## Language
 
-- English (primary): `.md` files
-- 正體中文 (auto-translated): `.zh.md` files
-- Never edit `.zh.md` directly — fix the English source, then re-sync.
+All content is written in [Simple English](https://en.wikipedia.org/wiki/Simple_English).

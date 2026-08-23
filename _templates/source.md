@@ -1,6 +1,5 @@
 ---
 title: "{{title}}"
-lang: en
 type: source
 status: active
 created: {{date}}
