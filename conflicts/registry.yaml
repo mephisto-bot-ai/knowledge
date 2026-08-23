@@ -1,0 +1,20 @@
+# Conflict and duplicate registry
+# Record disagreements instead of silently overwriting or deleting knowledge.
+conflicts: []
+
+# Entry shape:
+# - id: conflict:topic:short-stable-name
+#   type: contradiction       # contradiction | duplicate | merge-candidate | ambiguity
+#   status: unresolved        # unresolved | resolved | superseded | accepted
+#   title: "Short description of the issue"
+#   claims:
+#     - claim:example:one
+#     - claim:example:two
+#   notes:
+#     - "Explain exactly what differs."
+#   evidence: []               # Evidence IDs or URLs used in review
+#   canonical_note: null       # Set when one note is selected as canonical
+#   resolution: null           # Explain the decision, or why it remains unresolved
+#   reviewer: null
+#   created: 2026-08-23
+#   updated: 2026-08-23
