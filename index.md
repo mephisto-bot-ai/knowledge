@@ -5,7 +5,7 @@
 
 ## Concepts
 
-*(none yet)*
+- [[karpathy-llm-wiki-pattern]] — A way to build a knowledge base that grows over time
 
 ## Entities
 

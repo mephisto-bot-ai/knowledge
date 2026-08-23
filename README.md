@@ -2,6 +2,8 @@
 
 A public, Git-native knowledge base built on the [Karpathy LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
+> **Agents: Read [`AGENTS.md`](AGENTS.md) first.** It contains the schema, rules, and step-by-step workflows for adding, querying, and maintaining content.
+
 ## What This Is
 
 This repository contains original, public knowledge — concepts, entities, comparisons, and syntheses — as structured Markdown files. All content is independently authored from public sources.

@@ -99,6 +99,32 @@ Each note is split into two zones:
 - 2026-08-22: Initial version. (reason: ...)
 ```
 
+## Quick Start
+
+### Create a new concept page
+
+1. Copy `_templates/concept.md` to `wiki/concepts/your-note-name.md`
+2. Fill in frontmatter (title, type, status, created, updated, tags)
+3. Write content in Simple English
+4. Update `index.md` with a link to the new page
+5. Add a line to `log.md`
+6. Commit your changes
+
+### Fix an existing page
+
+1. Edit the `## Current Conclusion` section (this is mutable)
+2. **Do not edit** past entries in `## Evidence Timeline`
+3. Add a new entry at the bottom of Evidence Timeline with the reason for your change
+4. Update the `updated` field in frontmatter
+5. Commit your changes
+
+### When knowledge changes (supersede)
+
+1. Do not delete the old page
+2. Mark the old claim as `superseded` in `claims/claim-registry.yaml`
+3. Create a new claim with `supersedes` pointing to the old one
+4. Record the change in the page's Evidence Timeline
+
 ## Operations
 
 ### 1. Create
