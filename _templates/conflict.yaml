@@ -1,0 +1,15 @@
+id: conflict:{{topic-slug}}
+type: contradiction
+status: unresolved
+title: "{{short description}}"
+claims:
+  - claim:{{first-claim}}
+  - claim:{{second-claim}}
+notes:
+  - "Explain exactly what differs."
+evidence: []
+canonical_note: null
+resolution: null
+reviewer: null
+created: {{date}}
+updated: {{date}}

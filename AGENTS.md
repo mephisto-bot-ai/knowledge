@@ -61,7 +61,9 @@ related:                           # Wikilinks to related notes
 wikidata: Q58806785                # Wikidata QID (stable cross-language identifier)
 source_aliases:                    # Multilingual Wikipedia links
   zh: "https://zh.wikipedia.org/wiki/..."
-sources: []                      # Removed — kept blank for backward compatibility
+sources: []                      # Deprecated; use claims/registry.yaml for claim-level sources
+claim_ids: []                    # Stable claim IDs owned by this note
+
 ```
 
 > **Note**: `sources` field is deprecated and kept blank for backward compatibility only.
@@ -149,6 +151,32 @@ Each note is split into two zones:
 4. Check `review_after` dates — flag stale notes
 5. Verify external URLs still valid
 6. Check `tier` — propose demoting dormant notes to archive
+7. Check every `claim_ids` entry exists in `claims/registry.yaml`
+8. Check every active claim has at least one evidence source
+9. Check every open gap has an owner, priority, and acceptance criteria
+10. Check conflict records link both claims and state a resolution path
+
+### 4. Claim-level provenance
+
+Claims are the smallest unit of knowledge that can be independently checked. Store them in `claims/registry.yaml`; do not hide important factual claims only inside prose.
+
+Each claim must have a stable ID, one owning note, a concise claim text, a lifecycle status, a confidence score, and one or more evidence records. Each evidence record must include a URL, source type, access date, and a short explanation of how the source supports or disputes the claim.
+
+A note must list its claim IDs in frontmatter under `claim_ids`. A claim may be revised, disputed, or superseded, but its ID must not be silently reused for a different statement.
+
+### 5. Knowledge-gap workflow
+
+Knowledge gaps are tracked in `gaps/registry.yaml`. A gap is not a note draft: it is a request for missing, weak, stale, or disputed knowledge.
+
+Every gap must include a stable ID, topic, gap type, priority, status, requested outcome, owner, suggested source types, and acceptance criteria. Agents should claim a gap before drafting. When a gap is completed, link it to the resulting note and claims; do not delete the gap record.
+
+### 6. Duplicate and conflict workflow
+
+Before creating a page, search `index.md`, existing claims, and open gaps for similar topics. If two pages cover the same subject, choose one canonical page and link the other instead of creating silent duplicates.
+
+When claims disagree, record the disagreement in `conflicts/registry.yaml`. A conflict must link the competing claim IDs, describe the disagreement, list the relevant evidence, and state whether it is unresolved, resolved, or superseded. Never resolve a conflict by deleting the older claim.
+
+Pull requests that add or modify claims must explain whether they create, update, supersede, duplicate, or dispute an existing claim. A merge requires an explicit resolution or an accepted unresolved state.
 
 ## Rules
 
@@ -183,8 +211,10 @@ When a note corresponds to a Wikidata entity:
 3. Use Wikidata API for structured properties (founding date, creator, etc.)
 4. QID is stable even if Wikipedia pages are renamed
 
-## Future Automation (Not Yet Implemented)
+## Future Automation
 
 - **Publishing**: Quartz to publish wiki/ as searchable website
 - **Agent retrieval**: OKB MCP server for vault semantic search
-- **GitHub Actions**: Validate frontmatter, build index.json, dead-link check
+- **GitHub Actions**: Validate frontmatter, registries, index, and dead links
+- **Gap reports**: Build a report of high-priority unassigned and stale gaps
+- **Claim reports**: Build a report of unsupported, disputed, and overdue claims

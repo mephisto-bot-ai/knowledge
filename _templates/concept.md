@@ -10,6 +10,7 @@ confidence: 0.5
 review_after: {{review_after}}
 related: []
 wikidata: 
+claim_ids: []
 ---
 
 # {{title}}
@@ -20,11 +21,13 @@ wikidata:
 
 ## Key Claims
 
+Use one short statement per claim. Add each claim's stable ID to frontmatter and `claims/registry.yaml`.
+
 ## Evidence
 
-| Claim | Source | Evidence type | Confidence |
-|-------|--------|--------------|------------|
-|       |        |              |            |
+| Claim ID | Claim | Evidence IDs | Confidence |
+|----------|-------|--------------|------------|
+|          |       |              |            |
 
 ## Interpretation / Analysis
 

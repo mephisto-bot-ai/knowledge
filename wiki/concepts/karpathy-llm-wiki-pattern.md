@@ -11,6 +11,10 @@ review_after: 2026-11-23
 related: []
 wikidata:
 source_aliases:
+claim_ids:
+  - claim:karpathy-llm-wiki-pattern:three-layers
+  - claim:karpathy-llm-wiki-pattern:immutable-raw
+  - claim:karpathy-llm-wiki-pattern:compounding
 ---
 
 # Karpathy LLM Wiki Pattern
@@ -33,11 +37,11 @@ Andrej Karpathy shared this pattern as a [GitHub gist](https://gist.github.com/k
 
 ## Evidence
 
-| Claim | Source | Evidence type | Confidence |
-|-------|--------|--------------|------------|
-| Three layers: raw, wiki, schema | [Karpathy gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) | primary | 0.95 |
-| Raw sources are immutable | [Karpathy gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) | primary | 0.95 |
-| Knowledge compounds over time | [Karpathy gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) | primary | 0.90 |
+| Claim ID | Claim | Evidence IDs | Confidence |
+|----------|-------|--------------|------------|
+| `claim:karpathy-llm-wiki-pattern:three-layers` | Three layers: raw, wiki, schema | `evidence:karpathy-gist:pattern` | 0.95 |
+| `claim:karpathy-llm-wiki-pattern:immutable-raw` | Raw sources are immutable | `evidence:karpathy-gist:pattern` | 0.95 |
+| `claim:karpathy-llm-wiki-pattern:compounding` | Knowledge compounds over time | `evidence:karpathy-gist:pattern` | 0.90 |
 
 ## Interpretation / Analysis
 

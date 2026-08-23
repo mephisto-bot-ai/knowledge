@@ -1,0 +1,23 @@
+# Knowledge-gap registry
+# A gap is a request for missing, weak, stale, or disputed knowledge.
+gaps: []
+
+# Entry shape:
+# - id: gap:topic:short-stable-name
+#   topic: "The subject that needs coverage"
+#   type: missing-topic       # missing-topic | weak-evidence | stale | disputed | translation
+#   priority: medium          # critical | high | medium | low
+#   status: open              # open | claimed | in-progress | blocked | completed | rejected
+#   requested_outcome: "What a good result must provide"
+#   owner: null               # GitHub handle or agent role
+#   created: 2026-08-23
+#   updated: 2026-08-23
+#   suggested_source_types: [official, paper, dataset]
+#   related_notes: []
+#   resulting_notes: []
+#   resulting_claims: []
+#   acceptance_criteria:
+#     - "At least two independent public sources"
+#     - "All factual claims have claim IDs"
+#     - "The resulting note is added to index.md"
+#   notes: "Why this gap matters or what remains unclear."
